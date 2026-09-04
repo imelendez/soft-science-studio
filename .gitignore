@@ -4,6 +4,10 @@ WEB_SERVICES_BUSINESS_CHARTER.md
 SOFT_SCIENCE_BRAND_GUIDELINES.md
 SOFT_SCIENCE_BUSINESS_AND_PRODUCT_HANDOFF.md
 SOFT_SCIENCE_NEXT_CHAT_BRIEF.md
+ANALYTICS_SETUP.md
+UTM_TRACKING.md
+utm-link-log.csv
+HOW_TO_PUBLISH_A_NOTE.md
 
 # Draft case studies pending client/org approval — do not publish publicly
 # until explicitly cleared. See project_sexy_pace_case_study_approval memory.
@@ -15,6 +19,9 @@ case-study/sexy-pace-running-club.html
 # OS / editor cruft
 .DS_Store
 *.swp
+
+# Business/financial records — never public
+BUSINESS_EXPENSES.csv
 
 # Secrets — never commit these if they show up later
 .env

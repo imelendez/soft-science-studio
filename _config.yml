@@ -1,0 +1,8 @@
+title: Soft Science Studio
+description: "Data and technology should make complicated things more useful — not more complicated."
+url: "https://softscience.studio"
+permalink: /notes/:slug/
+
+# No plugins enabled (e.g. jekyll-sitemap) — sitemap.xml and robots.txt are
+# hand-maintained at the repo root. Keep it that way to avoid a generated
+# sitemap silently overwriting the maintained one.

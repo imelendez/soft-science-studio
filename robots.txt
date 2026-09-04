@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://softscience.studio/sitemap.xml
