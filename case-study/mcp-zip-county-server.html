@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Study: ZIP ↔ County MCP Server — Soft Science Studio</title>
+<meta name="description" content="Turning fragmented ZIP-to-county geographic data into an explainable tool an AI agent can query directly, built with Python, an external API, BigQuery, and MCP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="wordmark">
+      <span class="wm-main">Soft Science</span>
+      <span class="wm-sub">STUDIO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../work.html" aria-current="page">Work</a>
+      <a href="../services.html">Services</a>
+      <a href="../notes.html">Notes</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Case Study · PROJECT_01</p>
+    <h1>ZIP ↔ county MCP server</h1>
+    <p class="lede">
+      Turning fragmented geographic data access into an explainable tool
+      that an AI agent can query directly — no scraping, no manual
+      lookup, no ambiguity about which county a ZIP code actually belongs
+      to.
+    </p>
+    <div class="meta-row">
+      <span><strong>Stack</strong>Python, external API, BigQuery, MCP</span>
+      <span><strong>Interface</strong>AI desktop client (MCP tools)</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>ZIP codes and counties don't map 1:1.</h2>
+    <p>
+      A ZIP code is a postal delivery construct, not a governmental
+      boundary — plenty of ZIP codes cross county lines, and a naive
+      one-to-one lookup silently produces wrong answers for anyone doing
+      geographic analysis, service-area planning, or compliance work tied
+      to county boundaries. Getting this right means handling overlap
+      explicitly rather than picking whichever county happens to come
+      back first.
+    </p>
+    <p>
+      The second problem was interface: this needed to be usable directly
+      by an AI agent mid-conversation, not just as a script someone runs
+      by hand. That meant building it as an MCP (Model Context Protocol)
+      server — a tool an AI desktop client can call directly, with typed
+      inputs and outputs the model can reason about.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Architecture</p>
+    <h2>Python → external API → BigQuery → MCP.</h2>
+    <div class="block-list">
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>DATA LAYER</span>
+        <h3>External API + BigQuery</h3>
+        <p>
+          Geographic reference data is pulled from an external API and
+          held in BigQuery, giving the server a queryable, versioned
+          source of truth instead of re-fetching or re-deriving mappings
+          on every call.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-green"></span>TOOL LAYER</span>
+        <h3>Multiple, single-purpose MCP tools</h3>
+        <p>
+          Rather than one do-everything endpoint, the server exposes
+          distinct tools — forward lookup (ZIP → county), a batch variant
+          for multiple ZIPs at once, and a reverse lookup (county → ZIPs)
+          — each with a narrow, predictable contract an agent can call
+          correctly without guessing at parameters.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-pink"></span>CORRECTNESS</span>
+        <h3>Explicit overlap filtering</h3>
+        <p>
+          Because ZIP codes can span multiple counties, the server treats
+          overlap as a first-class case rather than an edge case — a
+          lookup returns every county a ZIP actually intersects, with
+          filtering logic to narrow results when a caller needs a single
+          best match instead of the full set.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>VALIDATION</span>
+        <h3>Tests, not assumptions</h3>
+        <p>
+          The lookup and overlap logic is covered by tests — geographic
+          edge cases (ZIPs spanning several counties, invalid or
+          non-existent ZIPs) are exactly the kind of thing that looks
+          correct until a specific real input breaks it.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">What it proves</p>
+    <h2>The pattern matters more than the ZIP codes.</h2>
+    <p>
+      This isn't really a ZIP-code project. It's a template for a broader
+      pattern: taking a fragmented, easy-to-get-subtly-wrong data problem
+      and turning it into a small, well-tested, explainable tool that an
+      AI agent — or a human — can call with confidence. The same shape
+      applies to plenty of messy organizational data problems that aren't
+      about geography at all.
+    </p>
+    <blockquote class="pull">
+      <p>The hard part was never fetching the data. It was deciding what "correct" means when the real world doesn't map cleanly onto the data model — and building tests that hold that decision in place.</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <h2>Have a fragmented data problem?</h2>
+    <p class="lede">If something in your organization's data doesn't map as cleanly as everyone assumes, that's usually where the real work is.</p>
+    <a href="../contact.html" class="btn">Get in touch</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="wm-main" style="font-size: 1rem;">Soft Science</span>
+    </span>
+    <span>&copy; 2026 Soft Science Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>

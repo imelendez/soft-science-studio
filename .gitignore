@@ -1,0 +1,23 @@
+# Internal business/brand strategy docs — not for the public repo.
+# These are working documents for planning sessions, not public site content.
+WEB_SERVICES_BUSINESS_CHARTER.md
+SOFT_SCIENCE_BRAND_GUIDELINES.md
+SOFT_SCIENCE_BUSINESS_AND_PRODUCT_HANDOFF.md
+SOFT_SCIENCE_NEXT_CHAT_BRIEF.md
+
+# Draft case studies pending client/org approval — do not publish publicly
+# until explicitly cleared. See project_sexy_pace_case_study_approval memory.
+case-study/sexy-pace-running-club.html
+
+# Local dev tooling, not part of the published site
+.claude/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+
+# Secrets — never commit these if they show up later
+.env
+.env.*
+*.pem
+*.key
