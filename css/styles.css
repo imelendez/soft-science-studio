@@ -12,6 +12,15 @@
   --cream: #FAF8F2;
   --ink: #18202A;
 
+  /* Brand cyan on cobalt measures 3.22:1 — fine for underlines/dots/rules
+     (non-text, needs 3:1) but fails WCAG AA for text (needs 4.5:1). This
+     lightened tint measures 5.0:1 on cobalt and is used for small text
+     only. --cyan itself is unchanged for decorative use. (The handoff
+     package solved this by switching these labels to cream; keeping a
+     cyan-family accent instead preserves the brand's stated accent role
+     while clearing AA with margin.) */
+  --cyan-text: #B8EAF7;
+
   --rule: rgba(24, 32, 42, 0.12);
   --rule-on-cobalt: rgba(250, 248, 242, 0.28);
 
@@ -180,7 +189,7 @@ a {
 }
 
 .section-cobalt .eyebrow {
-  color: var(--cyan);
+  color: var(--cyan-text);
 }
 
 h1, h2, h3 {
@@ -192,7 +201,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-size: clamp(2rem, 4.6vw, 3.2rem);
 }
 
 h2 {
@@ -262,7 +271,7 @@ p {
 }
 
 .section-cobalt .block .label-mono {
-  color: var(--cyan);
+  color: var(--cyan-text);
 }
 
 /* ---- Stat row ---- */
@@ -342,6 +351,103 @@ ul.plain-list li {
   opacity: 0.88;
 }
 
+/* Primary + secondary action pairing */
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.cta-secondary {
+  font-weight: 600;
+  text-decoration: none;
+  background-image: linear-gradient(var(--cyan), var(--cyan));
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position: 0 100%;
+  padding-bottom: 2px;
+}
+
+/* Visible keyboard focus on every interactive element */
+a:focus-visible,
+button:focus-visible,
+iframe:focus-visible {
+  outline: 3px solid var(--cyan-text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.section-cobalt a:focus-visible {
+  outline-color: var(--cream);
+}
+
+/* Responsive Google Form embed (Contact only) */
+.form-embed {
+  width: 100%;
+  max-width: 680px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
+}
+
+.form-embed iframe {
+  display: block;
+  width: 100%;
+  height: 1100px;
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  .form-embed iframe {
+    height: 1320px;
+  }
+}
+
+.form-fallback {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  max-width: 680px;
+}
+
+.privacy-note {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  max-width: 680px;
+}
+
+/* Article index cards (article page typography lives in css/article.css) */
+.article-card {
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.article-card:first-child {
+  border-top: none;
+  padding-top: 8px;
+}
+
+.article-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.article-card h3 a {
+  text-decoration: none;
+}
+
+.article-card h3 a:hover {
+  color: var(--cobalt);
+}
+
+.article-card p {
+  margin: 0;
+  max-width: 68ch;
+}
+
 /* ---- Draft banner (internal use, not for public pages) ---- */
 .draft-banner {
   background: var(--pink);
@@ -369,6 +475,25 @@ ul.plain-list li {
 
 @media (max-width: 640px) {
   .section {
-    padding: 52px 0;
+    padding: 44px 0;
+  }
+
+  /* Keep the primary action closer to the top of the page on phones
+     without cutting copy. */
+  body {
+    font-size: 17px;
+  }
+
+  .lede {
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+  }
+
+  .site-header {
+    padding: 14px 0;
+  }
+
+  .site-nav {
+    gap: 16px;
   }
 }

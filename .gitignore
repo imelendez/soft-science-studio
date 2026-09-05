@@ -9,6 +9,15 @@ UTM_TRACKING.md
 utm-link-log.csv
 HOW_TO_PUBLISH_A_NOTE.md
 
+# Content handoff package — source material, research, fact-check notes, and
+# provenance. The finished article PAGES get published; none of this does.
+soft-science-handoff/
+soft-science-seo-blog-ga4.zip
+soft-science-articles.md
+soft-science-build-instructions.md
+soft-science-build-instructions2.md
+*.pdf
+
 # Draft case studies pending client/org approval — do not publish publicly
 # until explicitly cleared. See project_sexy_pace_case_study_approval memory.
 case-study/sexy-pace-running-club.html
