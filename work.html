@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager: replace GTM-5JPPNKL7 with the real container ID -->
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -11,7 +11,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work — Soft Science Studio</title>
-<meta name="description" content="Case studies from real Soft Science Studio projects: data, AI, MCP, and technical infrastructure work.">
+<meta name="description" content="Project examples from Soft Science Studio: what the problem was, what was built, and why it matters.">
+<link rel="canonical" href="https://softscience.studio/work.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://softscience.studio/work.html">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="Work — Soft Science Studio">
+<meta property="og:description" content="Project examples: the problem, what was built, and the decisions behind it.">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,7 +26,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script src="js/analytics.js" defer></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript): replace GTM-5JPPNKL7 with the real container ID -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -34,7 +41,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="index.html">Home</a>
       <a href="work.html" aria-current="page">Work</a>
       <a href="services.html">Services</a>
-      <a href="notes.html">Notes</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -44,10 +50,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="section section-cobalt">
   <div class="wrap">
     <p class="eyebrow">Work</p>
-    <h1>Real projects. Problem, architecture, decisions, tradeoffs.</h1>
+    <h1>What the problem was, and what was built.</h1>
     <p class="lede">
-      Not "I used MCP." What the actual problem was, what was built, why,
-      and what it changed.
+      Project write-ups covering the actual problem, the approach, the
+      trade-offs, and what it changed.
     </p>
   </div>
 </section>
@@ -56,13 +62,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="block-list">
       <div class="block">
-        <span class="label-mono"><span class="dot dot-cyan"></span>PROJECT_01 · PYTHON / API / BIGQUERY / MCP</span>
-        <h3><a href="case-study/mcp-zip-county-server.html" class="underline-cyan" data-cta="case-study-mcp">ZIP ↔ county MCP server</a></h3>
+        <span class="label-mono"><span class="dot dot-cyan"></span>PERSONAL PROJECT · BUILT AND SHIPPED BY ISMAEL MELENDEZ</span>
+        <h3><a href="case-study/mcp-zip-county-server.html" class="underline-cyan" data-cta="case-study-mcp">Making ZIP-code data usable for service-area questions</a></h3>
         <p>
-          Turning fragmented geographic data access into an explainable
-          tool an AI agent can query directly.
+          A tool that answers "which county is this ZIP code in?" correctly
+          — including the messy cases where one ZIP crosses several county
+          lines. Built so an AI assistant can look the answer up directly
+          instead of someone checking by hand.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <h2>Have a similar problem?</h2>
+    <p class="lede">
+      If something in your data doesn't line up as cleanly as everyone
+      assumes, that's usually where the real work is.
+    </p>
+    <div class="cta-row">
+      <a href="contact.html" class="btn" data-cta="tell-me-about-your-project">Tell me about your project</a>
     </div>
   </div>
 </section>
