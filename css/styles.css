@@ -14,9 +14,12 @@
 
   /* Brand cyan on cobalt measures 3.22:1 — fine for underlines/dots/rules
      (non-text, needs 3:1) but fails WCAG AA for text (needs 4.5:1). This
-     lightened tint measures 4.53:1 on cobalt and is used for small text
-     only. --cyan itself is unchanged for decorative use. */
-  --cyan-text: #9FE2F5;
+     lightened tint measures 5.0:1 on cobalt and is used for small text
+     only. --cyan itself is unchanged for decorative use. (The handoff
+     package solved this by switching these labels to cream; keeping a
+     cyan-family accent instead preserves the brand's stated accent role
+     while clearing AA with margin.) */
+  --cyan-text: #B8EAF7;
 
   --rule: rgba(24, 32, 42, 0.12);
   --rule-on-cobalt: rgba(250, 248, 242, 0.28);
@@ -413,6 +416,36 @@ iframe:focus-visible {
   font-size: 0.85rem;
   opacity: 0.75;
   max-width: 680px;
+}
+
+/* Article index cards (article page typography lives in css/article.css) */
+.article-card {
+  padding: 28px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.article-card:first-child {
+  border-top: none;
+  padding-top: 8px;
+}
+
+.article-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.3rem;
+  line-height: 1.25;
+}
+
+.article-card h3 a {
+  text-decoration: none;
+}
+
+.article-card h3 a:hover {
+  color: var(--cobalt);
+}
+
+.article-card p {
+  margin: 0;
+  max-width: 68ch;
 }
 
 /* ---- Draft banner (internal use, not for public pages) ---- */

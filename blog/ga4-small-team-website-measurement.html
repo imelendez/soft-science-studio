@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JPPNKL7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What should a small team measure in GA4? Start with inquiries</title>
+<meta name="description" content="A plain-language guide to using GA4, Search Console, and form responses to understand website discovery, interest, and actual inquiries.">
+<link rel="canonical" href="https://softscience.studio/blog/ga4-small-team-website-measurement.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="What should a small team measure in GA4? Start with inquiries">
+<meta property="og:description" content="A plain-language guide to using GA4, Search Console, and form responses to understand website discovery, interest, and actual inquiries.">
+<meta property="og:url" content="https://softscience.studio/blog/ga4-small-team-website-measurement.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What should a small team measure in GA4? Start with inquiries",
+  "description": "A plain-language guide to using GA4, Search Console, and form responses to understand website discovery, interest, and actual inquiries.",
+  "mainEntityOfPage": "https://softscience.studio/blog/ga4-small-team-website-measurement.html",
+  "author": {
+    "@type": "Person",
+    "name": "Ismael Melendez",
+    "url": "https://softscience.studio/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Soft Science Studio",
+    "url": "https://softscience.studio/"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/article.css">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/contact-events.js" defer></script>
+</head>
+<body data-article-id="ga4-small-team-website-measurement">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/index.html" class="wordmark">
+      <span class="wm-main">Soft Science</span>
+      <span class="wm-sub">STUDIO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/index.html">Home</a>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/notes.html" aria-current="page">Articles</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+<article class="studio-article">
+<h1>What should a small team measure in GA4? Start with inquiries</h1>
+<p class="article-byline">By <a href="/about.html">Ismael Melendez</a></p>
+<p>For a small service business or nonprofit team, website measurement should begin with a practical question: is the site helping people take the next useful step?</p>
+<p>Google Analytics 4, usually called GA4, helps describe activity on your website. You do not need a complicated dashboard to get started. First decide what the website is meant to help someone do.</p>
+<h2>Use three views of the journey</h2>
+<p>Google Search Console helps explain how people encounter your pages in Google Search. GA4 helps explain activity after visitors reach your website. Your inquiry form or contact records tell you which messages actually arrived.</p>
+<p>These views serve different purposes. Their counts will not necessarily match because their definitions, coverage, and collection methods differ. Treat them as related evidence rather than a single perfect record of each person.</p>
+<h2>Separate interest from an inquiry</h2>
+<p>A click on “Tell me about your project” shows interest. A submitted inquiry means someone provided a way to continue the conversation. A booked call or signed project happens later.</p>
+<p>GA4&#x27;s recommended event for a generated lead is called <code>generate_lead</code>. Use it when a real lead is confirmed, not when someone merely clicks toward a form. An important recorded action can be marked as a key event in GA4. See <a href="https://support.google.com/analytics/answer/9267735?hl=en">Google&#x27;s recommended events</a> and <a href="https://support.google.com/analytics/answer/9267568?hl=en">key event guidance</a>.</p>
+<h2>If your form is embedded from Google Forms</h2>
+<p>Keep the first setup simple. Track clicks from your website toward Contact and the direct form link. Use the form&#x27;s recorded responses to count actual inquiries.</p>
+<p>An embedded Google Form runs on a different origin from your website. Ordinary tracking code on the surrounding page cannot read its submission confirmation. Loading the Contact page, viewing the iframe, or clicking the form link should not be reported as a completed lead.</p>
+<p>You can still learn which articles lead people toward Contact. Just label that result accurately as interest rather than form completion.</p>
+<h2>Label links you share outside the website</h2>
+<p>Campaign parameters, often called UTM tags, help identify incoming links. For example, use one consistent campaign name when sharing an article on LinkedIn or in a newsletter. Keep the labels simple and avoid tagging your site&#x27;s internal navigation. <a href="https://support.google.com/analytics/answer/10917952?hl=en">Google&#x27;s campaign URL guidance</a></p>
+<p>Never put a person&#x27;s name or email address into campaign labels or send form-message contents to GA4. <a href="https://support.google.com/analytics/answer/6366371?hl=en">Google&#x27;s guidance on personal information</a></p>
+<h2>Review the evidence without overreacting</h2>
+<p>At an early stage, review search discovery, visits to useful pages, contact clicks, and recorded inquiries. Keep a separate note of whether an inquiry fits your services and becomes a proposal or project.</p>
+<p>A few visits are not enough to declare an article a success or failure. Use the numbers alongside the questions people ask you, and change the page when you can explain what problem that change should solve.</p>
+<p><a href="/contact.html" data-contact-method="contact_page" data-cta-location="article_end">Ask about website measurement support</a>, or <a href="/blog/campaign-traffic-meaningful-engagement.html">read the campaign reporting example</a>.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="wm-main" style="font-size: 1rem;">Soft Science</span>
+    </span>
+    <span>&copy; 2026 Soft Science Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>
