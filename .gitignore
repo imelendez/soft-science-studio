@@ -38,3 +38,7 @@ BUSINESS_EXPENSES.csv
 .env.*
 *.pem
 *.key
+
+# Working decision log — reasoning behind non-obvious choices.
+# Private for now; a curated version could be published later.
+DECISIONS.md

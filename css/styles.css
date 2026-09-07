@@ -448,6 +448,32 @@ iframe:focus-visible {
   max-width: 68ch;
 }
 
+/* Answer-first summary at the top of each article. States the takeaway
+   before the argument, so a reader (or an answer engine) gets the point
+   without reading to the end. */
+.answer-first {
+  border-left: 3px solid var(--cyan);
+  background: rgba(49, 84, 200, 0.05);
+  padding: 16px 18px;
+  margin: 24px 0 28px;
+  border-radius: 0 4px 4px 0;
+}
+
+.answer-first p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.answer-first strong {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cobalt);
+  margin-bottom: 6px;
+}
+
 /* Provenance line on the work index: who did it, in what capacity */
 .provenance {
   font-size: 0.82rem;
