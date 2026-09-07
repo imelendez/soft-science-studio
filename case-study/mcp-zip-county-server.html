@@ -25,6 +25,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="stylesheet" href="../css/styles.css">
 <script src="../js/analytics.js" defer></script>
 <script src="../js/contact-events.js" defer></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Making ZIP-code data usable for service-area questions",
+  "description": "A tested ZIP-to-county lookup that handles ZIPs crossing county lines, callable directly by an AI assistant.",
+  "datePublished": "2026-09-04",
+  "dateModified": "2026-09-04",
+  "mainEntityOfPage": "https://softscience.studio/case-study/mcp-zip-county-server.html",
+  "author": {"@type": "Person", "name": "Ismael Melendez", "url": "https://softscience.studio/about.html"},
+  "publisher": {"@type": "Organization", "name": "Soft Science Studio", "url": "https://softscience.studio/"}
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript): replace GTM-5JPPNKL7 with the real container ID -->
@@ -66,6 +79,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span><strong>Built with</strong>Python, an external data API, BigQuery</span>
       <span><strong>Used from</strong>An AI assistant on the desktop</span>
     </div>
+<div class="answer-first">
+      <p><strong>Short answer</strong>ZIP codes don't map cleanly onto counties — many cross county lines, so the common one-to-one lookup silently returns wrong answers for service-area reporting or grant boundaries. This project builds a tested lookup that returns every county a ZIP actually touches, and exposes it so an AI assistant can query real data instead of guessing.</p>
+    </div>
+    <p class="byline-date">Published <time datetime="2026-09-04">4 September 2026</time></p>
+
   </div>
 </section>
 

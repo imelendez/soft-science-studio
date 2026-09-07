@@ -474,6 +474,27 @@ iframe:focus-visible {
   margin-bottom: 6px;
 }
 
+/* On cobalt sections the tint and label above are cobalt-on-cobalt, i.e.
+   invisible. Take the colors from the same set as the surface behind. */
+.section-cobalt .answer-first {
+  background: rgba(250, 248, 242, 0.10);
+  border-left-color: var(--cyan);
+}
+
+.section-cobalt .answer-first p {
+  color: var(--cream);
+}
+
+.section-cobalt .answer-first strong {
+  color: var(--cyan-text, var(--cyan));
+}
+
+.byline-date {
+  font-size: 0.85rem;
+  margin: 14px 0 0;
+  opacity: 0.75;
+}
+
 /* Provenance line on the work index: who did it, in what capacity */
 .provenance {
   font-size: 0.82rem;
