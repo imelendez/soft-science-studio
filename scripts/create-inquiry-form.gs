@@ -78,7 +78,18 @@ function createInquiryForm() {
   // No sign-in required: collecting verified emails would force responders
   // to have a Google account and log in, which loses real inquiries.
   form.setCollectEmail(false);
-  form.setRequireLogin(false);          // no-op on personal accounts; explicit anyway
+
+  // setRequireLogin exists only on Google Workspace accounts, where a form
+  // can otherwise default to "org members only" and silently reject the
+  // public. On a personal account it throws "This operation is not
+  // supported" — and there is no login requirement to turn off in the first
+  // place, so swallowing the error is correct rather than lazy.
+  try {
+    form.setRequireLogin(false);
+  } catch (e) {
+    Logger.log('setRequireLogin skipped (personal account, not applicable).');
+  }
+
   form.setLimitOneResponsePerUser(false);
   form.setAllowResponseEdits(false);
   form.setPublishingSummary(false);     // responders must not see other responses
