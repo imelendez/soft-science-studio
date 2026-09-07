@@ -1,0 +1,50 @@
+/* Article page typography. From the content handoff package's
+   code/article.css, scoped so it doesn't restyle other pages.
+
+   Note: the package also included a rule setting .section-cobalt .eyebrow
+   and .section-cobalt .block .label-mono to cream, to fix the 3.22:1
+   cyan-on-cobalt contrast problem. That fix is instead applied in
+   styles.css via the --cyan-text token (5.0:1), which clears WCAG AA while
+   keeping a cyan-family accent per the brand guidelines. Deliberately not
+   duplicated here — two competing rules for the same elements. */
+
+.studio-article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.studio-article h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.15;
+}
+
+.studio-article h2 {
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  line-height: 1.25;
+  margin-top: 2rem;
+}
+
+.studio-article p,
+.studio-article li {
+  line-height: 1.7;
+}
+
+.studio-article .article-byline {
+  font-size: 1rem;
+}
+
+.studio-article a {
+  text-decoration: underline;
+  text-underline-offset: .16em;
+  overflow-wrap: anywhere;
+}
+
+.studio-article a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
+.studio-article code {
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JPPNKL7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A coaching tool built to admit what it doesn't know yet — Soft Science Studio</title>
+<meta name="description" content="Most social media advice is generic and undated. This tool grounds its notes in real performance data, and stays quiet where the data doesn't yet support a claim.">
+<link rel="canonical" href="https://softscience.studio/case-study/tweet-performance-coach.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://softscience.studio/case-study/tweet-performance-coach.html">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="A coaching tool built to admit what it doesn't know yet">
+<meta property="og:description" content="Five candidate datasets audited and rejected before a line of analysis was written, and a sample-size bar set in advance.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/analytics.js" defer></script>
+</head>
+<body data-article-id="tweet-performance-coach">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="wordmark">
+      <span class="wm-main">Soft Science</span>
+      <span class="wm-sub">STUDIO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../work.html" aria-current="page">Work</a>
+      <a href="../services.html">Services</a>
+      <a href="../notes.html">Articles</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Case study · Personal project, in progress</p>
+    <h1>A coaching tool built to admit what it doesn't know yet.</h1>
+    <p class="lede">
+      Advice about posting on social media is usually generic, undated,
+      and impossible to check — "post at 9am," "use three hashtags,"
+      source unknown. This tool takes the opposite approach: every note it
+      gives has to trace back to either a stated platform rule or the
+      account's own measured results. Where neither exists yet, it says
+      nothing rather than guessing convincingly.
+    </p>
+    <div class="meta-row">
+      <span><strong>Role</strong>Sole designer and developer</span>
+      <span><strong>Built with</strong>Python, MCP</span>
+      <span><strong>Status</strong>Active; data collection ongoing</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>Confident advice, unknown provenance.</h2>
+    <p>
+      The trouble with most engagement advice isn't that it's wrong. It's
+      that there's no way to tell. It arrives with no date, no source, and
+      no sample behind it — and platforms change often enough that a rule
+      which was true three years ago may be actively unhelpful now.
+    </p>
+    <p>
+      So the design constraint came first: the tool may only surface a
+      note it can justify. In practice that means every claim traces to
+      either a hard platform constraint, like the character limit, or a
+      finding from the account's own reconciled results, carried with the
+      sample size it came from. There is no third category for things that
+      merely sound right.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Before writing any analysis</p>
+    <h2>Five candidate datasets, all rejected.</h2>
+    <p class="lede">
+      The fastest way to ship this would have been to train something on a
+      public dataset and present the output confidently. That path got
+      audited and closed instead.
+    </p>
+    <div class="block-list">
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>THE AUDIT</span>
+        <h3>Disqualified for structural reasons</h3>
+        <p>
+          Five public datasets were checked and each ruled out on the
+          merits: no engagement metrics at all, too old to reflect how the
+          platform now works, drawn from a population whose audience and
+          algorithmic treatment don't match, or too small to support any
+          conclusion. A dataset that doesn't measure what you're asking
+          about can't be fixed by using it carefully.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-green"></span>THE API</span>
+        <h3>Not available at any sensible price</h3>
+        <p>
+          The account's own developer access carries zero read quota, and
+          current API pricing is pay-per-use with no free read tier. That
+          ruled out pulling history programmatically, so reference data is
+          hand-observed and logged deliberately — small and curated rather
+          than harvested at scale.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-pink"></span>THE TEMPTATION RESISTED</span>
+        <h3>No pooling to reach a sample size faster</h3>
+        <p>
+          Own-account results, observed trends, and nominated example
+          accounts stay statistically separate. Merging them would reach a
+          bigger sample sooner, and would repeat exactly the
+          population-mismatch error that disqualified one of the rejected
+          datasets — only self-inflicted this time.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The rule that shapes the output</p>
+    <h2>No single score, and no promises.</h2>
+    <p>
+      It would be easy to average the extracted features into one number
+      and call it a rating. That number would feel useful and mean
+      nothing, because it would imply a precision the underlying data
+      cannot support. So there is no aggregate score. Notes are individual
+      and separately checkable, and they're written as "associated with,"
+      never "will get you."
+    </p>
+    <blockquote class="pull">
+      <p>A false "no issues" is worse than a note that turns out wrong. A wrong note is visible and can be argued with. Silence just looks like approval.</p>
+    </blockquote>
+    <p>
+      That principle came from a real miss: an early version passed a
+      draft that exceeded the character limit without flagging it. The
+      failure wasn't the incorrect advice — it was the confident quiet.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Deciding in advance</p>
+    <h2>What counts as enough data to act on.</h2>
+    <p class="lede">
+      The thresholds below were written down before the data existed,
+      specifically so that a promising-looking early pattern couldn't
+      argue its way into the tool later.
+    </p>
+    <div class="block-list">
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>UNDER 30 EXAMPLES</span>
+        <h3>Don't look</h3>
+        <p>Anything visible at this size is noise wearing a pattern's clothes.</p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-green"></span>50–99</span>
+        <h3>One question, asked properly</h3>
+        <p>
+          Enough for a single-feature nonparametric check — Spearman or
+          Mann-Whitney rather than Pearson or a t-test, because the
+          outcome distribution is zero-inflated and skewed rather than
+          normal. Effect size and confidence interval reported, language
+          still hedged.
+        </p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-pink"></span>150–200+</span>
+        <h3>Before data overrides a rule</h3>
+        <p>
+          The bar before collected results are allowed to override a
+          built-in heuristic, or before a multivariate look across roughly
+          ten extracted features is trustworthy at all — on the order of
+          10–20 observations per feature dimension.
+        </p>
+      </div>
+    </div>
+    <p style="margin-top:26px;">
+      For scale: detecting a moderate correlation at conventional power
+      needs roughly 85 observations; a realistic weak-but-real effect needs
+      closer to 780. At a normal posting cadence, even the 30-example floor
+      is a multi-month wait. That's treated as a constraint to design
+      around, not a reason to lower the bar.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Why this matters beyond one tool</p>
+    <h2>The same discipline applies to your dashboard.</h2>
+    <p>
+      This is a small project about social posts, but the failure mode it
+      guards against is the common one in organizational reporting: a
+      number presented with more confidence than its underlying data
+      earns. A dashboard tile showing a 40% change from eleven records is
+      the same error, and it gets acted on because it looks authoritative.
+    </p>
+    <p>
+      Deciding what counts as enough evidence <em>before</em> you go
+      looking is the part most reporting work skips. It's also the part
+      that determines whether the resulting numbers can be trusted to make
+      a decision with.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <h2>Reporting that overstates what it knows?</h2>
+    <p class="lede">
+      If you're not sure whether your numbers support the decisions being
+      made on them, that's worth an outside look.
+    </p>
+    <div class="cta-row">
+      <a href="../contact.html" class="btn" data-cta="tell-me-about-your-project"
+         data-contact-method="contact_page" data-cta-location="article_end">Tell me about your project</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="wm-main" style="font-size: 1rem;">Soft Science</span>
+    </span>
+    <span>&copy; 2026 Soft Science Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>

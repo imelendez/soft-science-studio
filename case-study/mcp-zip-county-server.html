@@ -10,8 +10,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Case Study: ZIP ↔ County MCP Server — Soft Science Studio</title>
-<meta name="description" content="Turning fragmented ZIP-to-county geographic data into an explainable tool an AI agent can query directly, built with Python, an external API, BigQuery, and MCP.">
+<title>Making ZIP-code data usable for service-area questions — Soft Science Studio</title>
+<meta name="description" content="A personal project: answering which county a ZIP code belongs to, correctly, including ZIPs that cross county lines — and making it callable by an AI assistant.">
+<link rel="canonical" href="https://softscience.studio/case-study/mcp-zip-county-server.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://softscience.studio/case-study/mcp-zip-county-server.html">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="Making ZIP-code data usable for service-area questions">
+<meta property="og:description" content="Answering which county a ZIP code belongs to — correctly, including the messy overlapping cases.">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -34,7 +41,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="../index.html">Home</a>
       <a href="../work.html" aria-current="page">Work</a>
       <a href="../services.html">Services</a>
-      <a href="../notes.html">Notes</a>
+      <a href="../notes.html">Articles</a>
       <a href="../about.html">About</a>
       <a href="../contact.html">Contact</a>
     </nav>
@@ -43,17 +50,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="section section-cobalt">
   <div class="wrap">
-    <p class="eyebrow">Case Study · PROJECT_01</p>
-    <h1>ZIP ↔ county MCP server</h1>
+    <p class="eyebrow">Personal project · Built and shipped by Ismael Melendez</p>
+    <h1>Making ZIP-code data usable for service-area questions</h1>
     <p class="lede">
-      Turning fragmented geographic data access into an explainable tool
-      that an AI agent can query directly — no scraping, no manual
-      lookup, no ambiguity about which county a ZIP code actually belongs
-      to.
+      Plenty of organizations need to answer "which county is this ZIP code
+      in?" — for service-area reporting, grant boundaries, or figuring out
+      where participants actually come from. It sounds simple, and the
+      common shortcut gets it wrong. This project builds a tool that
+      answers it correctly, including the messy cases, and lets an AI
+      assistant look it up directly instead of someone checking by hand.
     </p>
     <div class="meta-row">
-      <span><strong>Stack</strong>Python, external API, BigQuery, MCP</span>
-      <span><strong>Interface</strong>AI desktop client (MCP tools)</span>
+      <span><strong>Role</strong>Sole designer and developer</span>
+      <span><strong>Built with</strong>Python, an external data API, BigQuery</span>
+      <span><strong>Used from</strong>An AI assistant on the desktop</span>
     </div>
   </div>
 </section>
@@ -72,11 +82,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       back first.
     </p>
     <p>
-      The second problem was interface: this needed to be usable directly
-      by an AI agent mid-conversation, not just as a script someone runs
-      by hand. That meant building it as an MCP (Model Context Protocol)
-      server — a tool an AI desktop client can call directly, with typed
-      inputs and outputs the model can reason about.
+      The second problem was how people would actually use it. A script
+      that one technical person runs on their laptop doesn't help the
+      staff member who needs the answer mid-task. So it was built as a
+      tool an AI assistant can call on its own, in the middle of a
+      conversation — you ask a plain-language question, and it queries
+      real data instead of guessing. (The technical mechanism is the Model
+      Context Protocol, or MCP, a standard way of exposing a tool to AI
+      assistants.)
     </p>
   </div>
 </section>
@@ -152,9 +165,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="section section-cobalt">
   <div class="wrap">
-    <h2>Have a fragmented data problem?</h2>
-    <p class="lede">If something in your organization's data doesn't map as cleanly as everyone assumes, that's usually where the real work is.</p>
-    <a href="../contact.html" class="btn" data-cta="get-in-touch">Get in touch</a>
+    <h2>Have a similar problem?</h2>
+    <p class="lede">If something in your organization's data doesn't line up as cleanly as everyone assumes, that's usually where the real work is.</p>
+    <div class="cta-row">
+      <a href="../contact.html" class="btn" data-cta="tell-me-about-your-project">Tell me about your project</a>
+    </div>
   </div>
 </section>
 

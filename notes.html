@@ -1,9 +1,11 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
+<!-- No Jekyll front matter here on purpose. With front matter, the permalink
+     setting in _config.yml built this page to /notes/ instead of /notes.html,
+     which is what broke every nav link to it. As a plain static file it is
+     passed through untouched and serves at /notes.html. -->
 <head>
-<!-- Google Tag Manager: replace GTM-5JPPNKL7 with the real container ID -->
+<!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -12,70 +14,101 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notes — Soft Science Studio</title>
-<meta name="description" content="Notes on data, AI experiments, and technical work as it happens.">
+<title>Articles — Soft Science Studio</title>
+<meta name="description" content="Practical writing on nonprofit SEO, GA4 measurement, campaign reporting, CRM rollouts, and grant reporting workflows.">
+<link rel="canonical" href="https://softscience.studio/notes.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://softscience.studio/notes.html">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="Articles — Soft Science Studio">
+<meta property="og:description" content="Practical writing on measurement, reporting, and the workflows behind them.">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<script src="js/analytics.js" defer></script>
+<link rel="stylesheet" href="/css/styles.css">
+<script src="/js/analytics.js" defer></script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript): replace GTM-5JPPNKL7 with the real container ID -->
+<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="wordmark">
+    <a href="/index.html" class="wordmark">
       <span class="wm-main">Soft Science</span>
       <span class="wm-sub">STUDIO</span>
     </a>
     <nav class="site-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="work.html">Work</a>
-      <a href="services.html">Services</a>
-      <a href="notes.html" aria-current="page">Notes</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      <a href="/index.html">Home</a>
+      <a href="/work.html">Work</a>
+      <a href="/services.html">Services</a>
+      <a href="/notes.html" aria-current="page">Articles</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
     </nav>
   </div>
 </header>
 
+<main id="main-content">
+
 <section class="section section-cobalt">
   <div class="wrap">
-    <p class="eyebrow">Notes</p>
-    <h1>Written from real work, not a content calendar.</h1>
+    <p class="eyebrow">Articles</p>
+    <h1>Notes from real reporting and measurement work.</h1>
     <p class="lede">
-      Short notes on data, AI and MCP experiments, technical explainers,
-      and lessons from nonprofit and community technology work — published
-      as work actually happens, not on a fixed schedule.
+      Practical writing on what to measure, what the numbers can and can't
+      tell you, and the workflows behind them — written for teams without
+      a dedicated data person.
     </p>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    {% if site.posts.size > 0 %}
-      <div class="block-list">
-        {% for post in site.posts %}
-        <div class="block">
-          <span class="label-mono">{{ post.date | date: "%B %-d, %Y" }}</span>
-          <h3><a href="{{ post.url }}" class="underline-cyan" data-cta="notes-post-{{ post.slug }}">{{ post.title }}</a></h3>
-          <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        </div>
-        {% endfor %}
-      </div>
-    {% else %}
-      <p class="eyebrow">Placeholder — nothing published yet</p>
-      <p class="lede">
-        The first notes will follow from real projects already underway —
-        likely starting with the MCP server build. Check back soon.
-      </p>
-    {% endif %}
+    <div class="article-card">
+      <h3><a href="/blog/nonprofit-seo-existing-pages.html">Before you write more content, check the pages people already find</a></h3>
+      <p>A nonprofit SEO project shows how reviewing existing pages can reveal useful fixes—and why more search traffic is only part of the story.</p>
+    </div>
+
+    <div class="article-card">
+      <h3><a href="/blog/ga4-small-team-website-measurement.html">What should a small team measure in GA4? Start with inquiries</a></h3>
+      <p>A plain-language guide to using GA4, Search Console, and form responses to understand website discovery, interest, and actual inquiries.</p>
+    </div>
+
+    <div class="article-card">
+      <h3><a href="/blog/campaign-traffic-meaningful-engagement.html">Your campaign brought more visitors. What happened next?</a></h3>
+      <p>What a nonprofit influencer campaign taught me about separating traffic growth from engagement, and making the next step easier for visitors.</p>
+    </div>
+
+    <div class="article-card">
+      <h3><a href="/blog/crm-rollout-team-adoption.html">A new contact system needs a plan for the people using it</a></h3>
+      <p>Lessons from supporting a Qomon rollout: compare real workflows, help staff practice, check data transfers, and plan who owns support.</p>
+    </div>
+
+    <div class="article-card">
+      <h3><a href="/blog/grant-reporting-event-intake.html">Make grant reporting easier by asking better questions after events</a></h3>
+      <p>A practical example of redesigning event forms to capture the context that fundraising teams need alongside attendance numbers.</p>
+    </div>
   </div>
 </section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <h2>Recognize any of these?</h2>
+    <p class="lede">
+      If one of these sounds like your team's situation, that's a good
+      place to start a conversation.
+    </p>
+    <div class="cta-row">
+      <a href="/contact.html" class="btn" data-cta="tell-me-about-your-project">Tell me about your project</a>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
