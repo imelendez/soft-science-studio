@@ -448,6 +448,19 @@ iframe:focus-visible {
   max-width: 68ch;
 }
 
+/* Provenance line on the work index: who did it, in what capacity */
+.provenance {
+  font-size: 0.82rem;
+  color: var(--ink);
+  opacity: 0.62;
+  margin-top: 8px;
+}
+
+.section-cobalt .provenance {
+  color: var(--cream);
+  opacity: 0.72;
+}
+
 /* ---- Draft banner (internal use, not for public pages) ---- */
 .draft-banner {
   background: var(--pink);

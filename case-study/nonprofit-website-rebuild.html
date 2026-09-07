@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JPPNKL7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Replacing a fragile website with infrastructure the organization owns — Soft Science Studio</title>
+<meta name="description" content="A nonprofit run club was stuck waiting on an agency every time its website broke. Rebuilt on hosting the organization owns, with measurement that works and a handoff a volunteer can run.">
+<link rel="canonical" href="https://softscience.studio/case-study/nonprofit-website-rebuild.html">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://softscience.studio/case-study/nonprofit-website-rebuild.html">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="Replacing a fragile website with infrastructure the organization owns">
+<meta property="og:description" content="Mobile performance 65 to 94, images 14MB to 1MB, and a site the organization can maintain without its technical volunteer.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/analytics.js" defer></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="wordmark">
+      <span class="wm-main">Soft Science</span>
+      <span class="wm-sub">STUDIO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../work.html">Work</a>
+      <a href="../services.html">Services</a>
+      <a href="../notes.html">Articles</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Case study · Sole designer and developer</p>
+    <h1>Organization-owned infrastructure, not agency dependency.</h1>
+    <p class="lede">
+      A Houston nonprofit run club was running on agency-managed WordPress
+      hosting that had already gone down and was hard to maintain — the
+      technical lead had to wait on the agency whenever something broke,
+      and analytics installation was unreliable. The fix was replacing a
+      fragile, externally dependent website with lightweight, measurable
+      infrastructure the organization actually owns.
+    </p>
+    <div class="meta-row">
+      <span><strong>Organization</strong>Nonprofit run club (unnamed by request)</span>
+      <span><strong>Role</strong>Sole designer and developer</span>
+      <span><strong>Scope</strong>Migration, performance, analytics, SEO, content ops</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">The problem</p>
+    <h2>The real pain point was dependency, not design.</h2>
+    <p>
+      The organization didn't need a prettier site. It needed to stop
+      being at the mercy of a third party for uptime and basic changes,
+      and it needed analytics that actually worked. Any fix had to solve
+      that root cause, not just redecorate the surface.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Architecture</p>
+    <h2>Domain → org-owned GitHub repo → GitHub Pages → established services.</h2>
+    <div class="block-list">
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>OWNERSHIP</span>
+        <h3>The organization controls the domain</h3>
+        <p>Ismael controls the domain on the organization's behalf, and the source lives in a version-controlled, organization-owned GitHub repository — not an agency's private system.</p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-green"></span>COST &amp; MAINTENANCE</span>
+        <h3>Rebuilt from scratch on GitHub Pages</h3>
+        <p>Near-zero ongoing hosting cost, no server to maintain, and no downtime risk of the kind that motivated the migration. The old WordPress markup was left behind entirely rather than ported.</p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-pink"></span>SUCCESSION</span>
+        <h3>Built to survive without a technical volunteer</h3>
+        <p>A written README, a short screen recording, and one supervised practice update mean the organization can lose its technical volunteer without losing its website.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Performance</p>
+    <h2>Real Lighthouse testing, not assumptions.</h2>
+    <div class="stat-row">
+      <div class="stat">
+        <div class="stat-number">65 → 94</div>
+        <div class="stat-label">Mobile Lighthouse performance score</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">~14MB → ~1MB</div>
+        <div class="stat-label">Total image payload</div>
+      </div>
+    </div>
+    <p>
+      Desktop was already scoring 99, but mobile — where most visitors
+      land — was stuck at 65. Root cause: a 5.9MB unoptimized hero image
+      and render-blocking font loading. Both were fixed and the site was
+      re-tested against the live result, not assumed fixed.
+    </p>
+    <blockquote class="pull">
+      <p>Adding width/height attributes to images without also setting <code>height: auto</code> in CSS caused visible stretching on some mobile browsers — a regression that's invisible in review and only shows up on a real phone.</p>
+    </blockquote>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <p class="eyebrow">Analytics</p>
+    <h2>A tracking pattern built to survive without the builder.</h2>
+    <div class="block-list">
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-cyan"></span>PATTERN</span>
+        <h3>One event, every button, forever</h3>
+        <p>A single GTM trigger plus one GA4 event (<code>cta_click</code> with a <code>cta_name</code> parameter) covers every call-to-action, present and future — a new button just needs a <code>data-cta</code> attribute, no new GTM configuration.</p>
+      </div>
+      <div class="block">
+        <span class="label-mono"><span class="dot dot-green"></span>CAUGHT LIVE</span>
+        <h3>A double-counting bug, found and fixed</h3>
+        <p>Publishing the GTM container auto-added its own pageview tag alongside an existing hardcoded <code>gtag.js</code> snippet, silently doubling every pageview count. Caught before it distorted a single report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">SEO</p>
+    <h2>Targeted, connected, and measured within 24 hours.</h2>
+    <p>
+      Titles and meta descriptions rewritten against the phrase people
+      actually search locally, plus a previously-nonexistent
+      <code>sitemap.xml</code> and <code>robots.txt</code>, with Search
+      Console connected immediately so results were observable instead of
+      assumed. The target local phrase was generating real clicks within
+      24 hours — measurable, rather than a "give it six months" promise.
+    </p>
+  </div>
+</section>
+
+<section class="section section-cobalt">
+  <div class="wrap">
+    <h2>What this proves</h2>
+    <p class="lede">
+      A resource-constrained nonprofit doesn't need to choose between "no
+      website support" and "locked into an agency." Lightweight,
+      organization-owned infrastructure — built with established external
+      services rather than custom systems — can cost less to run and be
+      more reliable at the same time, and can survive a change in who's
+      volunteering.
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="wm-main" style="font-size: 1rem;">Soft Science</span>
+    </span>
+    <span>&copy; 2026 Soft Science Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>

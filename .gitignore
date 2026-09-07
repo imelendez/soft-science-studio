@@ -18,9 +18,10 @@ soft-science-build-instructions.md
 soft-science-build-instructions2.md
 *.pdf
 
-# Draft case studies pending client/org approval — do not publish publicly
-# until explicitly cleared. See project_sexy_pace_case_study_approval memory.
-case-study/sexy-pace-running-club.html
+# NOTE: the nonprofit website rebuild case study is now published in
+# de-identified form (case-study/nonprofit-website-rebuild.html). The
+# organization is deliberately unnamed because it has not approved being
+# named. Do not add its name to that page without explicit approval.
 
 # Local dev tooling, not part of the published site
 .claude/
