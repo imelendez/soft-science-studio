@@ -63,20 +63,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <h2>Send a note</h2>
 
-    <!--
-      ============================================================
-      PENDING VALUE — DO NOT DEPLOY UNTIL REPLACED
-      Replace FORM_EMBED_URL_PENDING below with the Google Form's
-      embed URL, which looks like:
-        https://docs.google.com/forms/d/e/<FORM_ID>/viewform?embedded=true
-      Get it from the form: Send > < > (embed HTML) > copy the src.
-      Also replace FORM_SHARE_URL_PENDING (the non-embedded /viewform
-      link) in the fallback section below.
-      ============================================================
-    -->
     <div class="form-embed">
       <iframe
-        src="FORM_EMBED_URL_PENDING"
+        src="https://docs.google.com/forms/d/e/1FAIpQLScjO74ev-8X2sV5E4YxFBWOiuHgGsyeDz8pVg9B8a5-JRgXbQ/viewform?embedded=true"
         title="Project inquiry form"
         loading="lazy">Loading…</iframe>
     </div>
@@ -84,8 +73,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="form-fallback">
       <p>
         If the form doesn't load, you can
-        <a href="FORM_SHARE_URL_PENDING" class="underline-cyan"
-           data-cta="contact-form-direct-link" target="_blank" rel="noopener">open it in a new tab</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjO74ev-8X2sV5E4YxFBWOiuHgGsyeDz8pVg9B8a5-JRgXbQ/viewform"
+           class="underline-cyan"
+           data-cta="contact-form-direct-link"
+           data-contact-method="google_form" data-cta-location="contact_page"
+           target="_blank" rel="noopener">open it in a new tab</a>
         or email
         <a href="mailto:hello@softscience.studio" class="underline-cyan"
            data-cta="contact-email-link"
