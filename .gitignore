@@ -42,3 +42,4 @@ BUSINESS_EXPENSES.csv
 # Working decision log — reasoning behind non-obvious choices.
 # Private for now; a curated version could be published later.
 DECISIONS.md
+PLAYBOOK-*.md
