@@ -5,6 +5,13 @@
    reopening that decision with Ismael.
    ========================================================================== */
 :root {
+  /* Two-step cobalt system (set 2026-09-09).
+     Deep = impact: heroes, major CTAs, footer, avatar.
+     Core = support: secondary panels, links, rules, data graphics.
+     Measured on deep cobalt: cream 10.03:1, cyan 5.28:1, pink 5.37:1,
+     green 5.20:1 — every accent clears AA for normal text, which the
+     core cobalt does not (cyan 3.22:1). */
+  --cobalt-deep: #0329B3;
   --cobalt: #3154C8;
   --cyan: #39C6E8;
   --pink: #F2A0C2;
@@ -167,6 +174,33 @@ a {
 .section-cobalt {
   background: var(--cobalt);
   color: var(--cream);
+}
+
+/* Impact sections — page heroes. Same behaviour as .section-cobalt, deeper
+   ground. Applied alongside it so every .section-cobalt rule still holds. */
+.section-deep {
+  background: var(--cobalt-deep);
+}
+
+/* On deep cobalt the real brand cyan clears AA for normal text (5.28:1),
+   so the lightened --cyan-text fallback is unnecessary here. Core cobalt
+   sections still need it. */
+/* Compound selector on purpose: .section-deep alone ties with
+   .section-cobalt .eyebrow, which is defined later in this file and would
+   win on source order. Both classes sit on the same element, so
+   .section-cobalt.section-deep raises specificity and settles it. */
+.section-cobalt.section-deep .eyebrow,
+.section-cobalt.section-deep .block .label-mono {
+  color: var(--cyan);
+}
+
+.section-cobalt.section-deep .btn {
+  background: var(--cream);
+  color: var(--cobalt-deep);
+}
+
+.section-deep a:focus-visible {
+  outline-color: var(--cyan);
 }
 
 .section-cobalt + .section-cobalt,
@@ -334,7 +368,7 @@ ul.plain-list li {
 /* ---- CTA / links ---- */
 .btn {
   display: inline-block;
-  background: var(--ink);
+  background: var(--cobalt-deep);
   color: var(--cream);
   text-decoration: none;
   font-weight: 600;
@@ -521,9 +555,14 @@ iframe:focus-visible {
 /* ---- Footer ---- */
 .site-footer {
   padding: 40px 0;
-  border-top: 2px solid var(--ink);
+  background: var(--cobalt-deep);
+  color: var(--cream);
   font-size: 0.85rem;
 }
+
+.site-footer a { color: var(--cream); }
+
+.site-footer .wm-sub { color: var(--cyan); }
 
 .site-footer .wrap {
   display: flex;
@@ -582,7 +621,7 @@ iframe:focus-visible {
   width: 74px; height: 74px;
   flex: 0 0 74px;
   border-radius: 50%;
-  background: var(--cobalt);
+  background: var(--cobalt-deep);
   color: var(--cream);
   display: grid;
   place-items: center;
