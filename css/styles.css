@@ -557,3 +557,121 @@ iframe:focus-visible {
     gap: 16px;
   }
 }
+
+
+/* ==========================================================================
+   Resource router (/me) and topic resource pages (/vote)
+   Warmer and looser than the business pages on purpose: this is the door
+   people arrive at from Instagram, where the person is the point.
+   Single-theme like the rest of the site — no dark mode block.
+   ========================================================================== */
+.router-wrap {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 44px var(--gutter) 64px;
+}
+
+.me-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.avatar-fallback {
+  width: 74px; height: 74px;
+  flex: 0 0 74px;
+  border-radius: 50%;
+  background: var(--cobalt);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.me-head h1 { font-size: 1.75rem; margin: 0 0 4px; }
+
+.tagline { margin: 0; color: var(--ink); opacity: 0.66; font-size: 0.98rem; }
+
+/* The hand-edited line. Does more for "a person made this" than any
+   styling choice — change it whenever it stops being true. */
+.currently {
+  border-left: 3px solid var(--pink);
+  padding: 2px 0 2px 14px;
+  margin: 0 0 34px;
+  font-size: 0.95rem;
+  color: var(--ink);
+  opacity: 0.78;
+  max-width: 34rem;
+}
+.currently b { opacity: 1; font-weight: 600; }
+
+.router-wrap h2 {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  opacity: 0.6;
+  margin: 38px 0 14px;
+}
+
+.cards { display: grid; gap: 12px; list-style: none; margin: 0; padding: 0; }
+
+/* Deliberately NOT uniform pills — varying weight and a category accent is
+   what stops this reading as a generic link stack. */
+.card {
+  display: block;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent, var(--cobalt));
+  border-radius: 12px;
+  padding: 16px 46px 16px 18px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.card:hover { border-color: var(--accent, var(--cobalt)); }
+.card .t { display: block; font-weight: 650; font-size: 1.05rem; letter-spacing: -0.01em; }
+.card .d { display: block; opacity: 0.66; font-size: 0.9rem; margin-top: 2px; }
+.card::after {
+  content: "\2192";
+  position: absolute; right: 18px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent, var(--cobalt));
+  font-size: 1.05rem;
+}
+.card[data-external]::after { content: "\2197"; }
+.card.primary { padding: 20px 46px 20px 20px; }
+.card.primary .t { font-size: 1.18rem; }
+
+/* Colour carrying category meaning, not decoration */
+.a-civic  { --accent: var(--green); }
+.a-data   { --accent: var(--cyan); }
+.a-body   { --accent: var(--pink); }
+.a-studio { --accent: var(--cobalt); }
+
+.socials { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.socials a {
+  display: inline-block;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 7px 14px;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+.socials a:hover { border-color: var(--cobalt); color: var(--cobalt); }
+
+.back { display: inline-block; font-size: 0.9rem; margin-bottom: 24px; }
+.page-title { font-size: 1.9rem; margin: 0 0 10px; }
+.router-intro { opacity: 0.7; max-width: 34rem; margin: 0 0 8px; }
+.verify {
+  font-size: 0.86rem;
+  opacity: 0.7;
+  border-top: 1px solid var(--rule);
+  margin-top: 40px;
+  padding-top: 16px;
+  max-width: 34rem;
+}
