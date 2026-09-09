@@ -675,3 +675,19 @@ iframe:focus-visible {
   padding-top: 16px;
   max-width: 34rem;
 }
+
+/* TEMP: featured/timely card for a current push. Safe to delete along with
+   the cards that use it once the campaign is over. */
+.card-featured {
+  background: rgba(99, 201, 139, 0.10);
+  border-color: rgba(99, 201, 139, 0.45);
+}
+.timely {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #2F8F5B;
+  margin-bottom: 6px;
+}
