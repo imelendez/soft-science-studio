@@ -43,6 +43,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/work.html">Work</a>
       <a href="/services.html">Services</a>
       <a href="/notes.html">Articles</a>
+      <a href="/events/">Events</a>
       <a href="/about.html">About</a>
       <a href="/contact.html">Contact</a>
     </nav>
@@ -76,11 +77,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul class="cards">
     <!--
       ============================================================
+      RECURRING — weekend events from the weekly video series.
+      This card STAYS. Each week, update the .timely label and the text to
+      match /events/.
+      TEMPORARY this week only: the featured treatment for 2026-09-19.
+      AFTER 2026-09-20: remove "card-featured" and the <span class="timely">
+      line, and switch to the evergreen text:
+        t: 📅 Weekend events
+        d: What's happening in Houston this weekend, from my weekly video.
+      ============================================================
+    -->
+    <li>
+      <a class="card primary a-body card-featured" href="/events/" data-cta="me-events">
+        <span class="timely">This Saturday</span>
+        <span class="t">📅 This weekend: Tackle Cancer Fest + UH 5K</span>
+        <span class="d">Both on Saturday, Sept 19. Details and sign-up links inside.</span>
+      </a>
+    </li>
+    <!--
+      ============================================================
       TEMPORARY — VDR push, added 2026-09-08 for the video.
       Extended 2026-09-14: the county runs weekly trainings and the video is
       still drawing responses, so this stays up. REMOVE AFTER 2026-10-14, together
       with the matching card on /vote/. The .card-featured and .timely styles
-      in css/styles.css exist only for these two cards.
+      in css/styles.css are SHARED with the weekend events cards — keep them.
       ============================================================
     -->
     <li>

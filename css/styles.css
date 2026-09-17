@@ -686,10 +686,14 @@ iframe:focus-visible {
 .card.primary .t { font-size: 1.18rem; }
 
 /* Colour carrying category meaning, not decoration */
-.a-civic  { --accent: var(--green); }
-.a-data   { --accent: var(--cyan); }
-.a-body   { --accent: var(--pink); }
-.a-studio { --accent: var(--cobalt); }
+/* --accent-ink: a darkened, text-safe version of each accent. The accents
+   themselves are too light to read as small text on a pale card. Measured
+   on a 10% accent tint over white (2026-09-17): civic 5.41, body 5.31,
+   data 5.76, studio 5.60 — all clear WCAG AA 4.5:1. */
+.a-civic  { --accent: var(--green);  --accent-ink: #257349; }
+.a-data   { --accent: var(--cyan);   --accent-ink: #0E6A7F; }
+.a-body   { --accent: var(--pink);   --accent-ink: #B8336A; }
+.a-studio { --accent: var(--cobalt); --accent-ink: #3154C8; }
 
 .socials { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
 .socials a {
@@ -717,9 +721,15 @@ iframe:focus-visible {
 
 /* TEMP: featured/timely card for a current push. Safe to delete along with
    the cards that use it once the campaign is over. */
+/* Featured cards take their colour from their own category accent, so a
+   civic card reads green and an events card reads pink. border-color resets
+   all four sides, so the left bar is restored explicitly. Shared by the VDR
+   cards and the weekend events cards. */
 .card-featured {
-  background: rgba(99, 201, 139, 0.10);
-  border-color: rgba(99, 201, 139, 0.45);
+  background: #fff;
+  background: color-mix(in srgb, var(--accent, var(--cobalt)) 10%, #fff);
+  border-color: color-mix(in srgb, var(--accent, var(--cobalt)) 45%, transparent);
+  border-left-color: var(--accent, var(--cobalt));
 }
 .timely {
   display: inline-block;
@@ -727,6 +737,6 @@ iframe:focus-visible {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #2F8F5B;
+  color: var(--accent-ink, #3154C8);
   margin-bottom: 6px;
 }
