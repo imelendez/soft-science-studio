@@ -43,7 +43,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="/work.html" data-cta="nav-work">Work</a>
       <a href="/services.html" data-cta="nav-services">Services</a>
       <a href="/notes.html" data-cta="nav-articles">Articles</a>
-      <a href="/events/" data-cta="nav-events">Events</a>
       <a href="/about.html" data-cta="nav-about">About</a>
       <a href="/contact.html" data-cta="nav-contact">Contact</a>
     </nav>
@@ -77,21 +76,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul class="cards">
     <!--
       ============================================================
-      RECURRING — weekend events from the weekly video series.
-      This card STAYS. Each week, update the .timely label and the text to
-      match /events/.
-      TEMPORARY this week only: the featured treatment for 2026-09-19.
-      AFTER 2026-09-20: remove "card-featured" and the <span class="timely">
-      line, and switch to the evergreen text:
-        t: 📅 Weekend events
-        d: What's happening in Houston this weekend, from my weekly video.
+      TEMPORARY — this week's highlighted event, from the weekly video.
+      Goes straight to the event's own page. REMOVE AFTER 2026-09-20.
+      Next week, replace it with that week's highlighted event, or delete
+      it if there isn't one. Give each a unique data-cta ("me-<event>").
       ============================================================
     -->
     <li>
-      <a class="card primary a-body card-featured" href="/events/" data-cta="me-events">
+      <a class="card primary a-body card-featured" href="https://posh.vip/e/tackle-cancer-fest"
+         data-external data-cta="me-tackle-cancer-fest">
         <span class="timely">This Saturday</span>
-        <span class="t">📅 This weekend: Tackle Cancer Fest + UH 5K</span>
-        <span class="d">Both on Saturday, Sept 19. Details and sign-up links inside.</span>
+        <span class="t">🎗️ Tackle Cancer Fest</span>
+        <span class="d">A 12-hour festival at Bauhaus Houston, Saturday, Sept 19. Tickets and details on the event page.</span>
+      </a>
+    </li>
+    <!--
+      EVERGREEN — leave this card alone. It always points at /events/; only
+      the listing on that page changes week to week.
+    -->
+    <li>
+      <a class="card primary a-body" href="/events/" data-cta="me-events">
+        <span class="t">📅 Weekend events</span>
+        <span class="d">What's happening in Houston this weekend, from my weekly video.</span>
       </a>
     </li>
     <!--
