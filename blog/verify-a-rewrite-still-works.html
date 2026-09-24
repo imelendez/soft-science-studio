@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5JPPNKL7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How do you know a rewrite still works? Test the rules, not the screens</title>
+<meta name="description" content="A migration or rebuild is a claim that your rules still behave the same way. Here is how to check that claim, using a 2016 game rebuilt for the browser as the worked example.">
+<link rel="canonical" href="https://softscience.studio/blog/verify-a-rewrite-still-works.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Soft Science Studio">
+<meta property="og:title" content="How do you know a rewrite still works? Test the rules, not the screens">
+<meta property="og:description" content="A migration or rebuild is a claim that your rules still behave the same way. Here is how to check that claim.">
+<meta property="og:url" content="https://softscience.studio/blog/verify-a-rewrite-still-works.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "datePublished": "2026-09-24",
+  "dateModified": "2026-09-24",
+  "headline": "How do you know a rewrite still works? Test the rules, not the screens",
+  "description": "A migration or rebuild is a claim that your rules still behave the same way. Here is how to check that claim, using a 2016 game rebuilt for the browser as the worked example.",
+  "mainEntityOfPage": "https://softscience.studio/blog/verify-a-rewrite-still-works.html",
+  "author": {
+    "@type": "Person",
+    "name": "Ismael Melendez",
+    "url": "https://softscience.studio/about.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Soft Science Studio",
+    "url": "https://softscience.studio/"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/article.css">
+<script src="/js/analytics.js" defer></script>
+<script src="/js/contact-events.js" defer></script>
+</head>
+<body data-article-id="verify-a-rewrite-still-works">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JPPNKL7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="/" class="wordmark" data-cta="nav-wordmark">
+      <span class="wm-main">Soft Science</span>
+      <span class="wm-sub">STUDIO</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="/" data-cta="nav-home">Home</a>
+      <a href="/work.html" data-cta="nav-work">Work</a>
+      <a href="/services.html" data-cta="nav-services">Services</a>
+      <a href="/notes.html" aria-current="page" data-cta="nav-articles">Articles</a>
+      <a href="/about.html" data-cta="nav-about">About</a>
+      <a href="/contact.html" data-cta="nav-contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+<article class="studio-article">
+<h1>How do you know a rewrite still works? Test the rules, not the screens</h1>
+<p class="article-byline">By <a data-cta="art-verify-a-rewrite-still-works-to-about" href="/about.html">Ismael Melendez</a> &middot; <time datetime="2026-09-24">24 September 2026</time></p>
+<div class="answer-first">
+<p><strong>Short answer</strong>Write your rules down as plain sentences before the rebuild starts, then check the new system against those sentences one at a time. Clicking around and deciding it looks right is not a check. The rules are the part you actually own, and they are the part most likely to be lost quietly.</p>
+</div>
+
+<p>Sooner or later someone proposes replacing a system you depend on. A new CRM. A database instead of the spreadsheet. A rebuilt website, or the same website on different software. The pitch is nearly always the same: everything works as it does now, only better.</p>
+
+<p>That sentence is a claim, and it is a bigger claim than it sounds. It says every rule your organization has accumulated — including the ones nobody has written down — will behave the same way afterwards. The question worth asking, before any of it starts, is simple: how will we know?</p>
+
+<h2>&ldquo;It looks right&rdquo; is not evidence</h2>
+
+<p>The usual check is that a few people open the new system, click around, and say it seems fine. This finds obvious breakage. It reliably misses the expensive kind.</p>
+
+<p>The expensive kind is a rule that changed silently. A lapsed donor is now counted at twelve months instead of thirteen. An attendee who registers twice is counted twice. A gift that used to trigger an acknowledgement no longer does, at one specific amount. Nothing looks broken, because nothing looks like anything — the screens are fine. You find out a quarter later, in a report you have already sent to a funder.</p>
+
+<h2>Write the rules down as sentences</h2>
+
+<p>Before a migration begins, get the rules out of people&#x27;s heads and into a list. Each one is a short sentence that is either true or false about the system, written in your own language rather than the software&#x27;s:</p>
+
+<ul>
+<li>A donor with no gift in the last thirteen months is lapsed.</li>
+<li>Someone who registers twice for the same event counts once.</li>
+<li>A gift over $250 generates an acknowledgement letter.</li>
+<li>A volunteer who never attended is not in the volunteer count.</li>
+<li>Deleting a household does not delete its individual people.</li>
+</ul>
+
+<p>This list is worth more than it looks. It is the part of your operation that lives in the software but does not belong to it, and writing it down is the only way it survives a change of system — or a change of staff. Most of the value shows up while you make it, because two people will disagree about a rule everyone assumed was settled. Better to find that in a meeting than in a year-end report.</p>
+
+<h2>A worked example, from a game</h2>
+
+<p>I recently rebuilt something with no stakeholders at all: a maze game I wrote in college in 2016, ported to run in a browser ten years later. Low stakes, same problem. The port is a claim that the rules still behave the same way, and I had no memory I trusted about what those rules were.</p>
+
+<p>So they got written down and checked automatically, twenty-nine of them, each one a sentence: a donut is always eaten, even at full health. The portal refuses you without the quota. Orbs alone are not enough. Kills alone are not enough. Health never exceeds one hundred. Running out of time ends the run.</p>
+
+<p>None of those are about how the game looks. They are about what it does, which is the part a rewrite quietly changes. The checks run against the real game code in a few seconds, so the answer to &ldquo;does it still work?&rdquo; is a list of sentences with a pass or fail beside each one, rather than an opinion formed after playing for a minute. <a data-cta="art-verify-a-rewrite-still-works-to-work" href="/work.html">The project and the test list are on the Work page</a>.</p>
+
+<p>A nonprofit database is not a game, and you will not usually get automated checks written for your CRM. You can still get the useful half: the sentences, and someone going through them deliberately after the switch.</p>
+
+<h2>What to ask before you approve the work</h2>
+
+<p>When someone proposes rebuilding or migrating a system, three questions do most of the work:</p>
+
+<ul>
+<li><strong>How will you show me the rules still hold?</strong> A good answer describes a check. A weak answer describes a demo.</li>
+<li><strong>Which rules are you aware of?</strong> If the list is shorter than yours, the difference is what gets lost.</li>
+<li><strong>What happens to the records that do not fit?</strong> Every migration has rows that will not map cleanly. Ask where they go, because the default is silently nowhere.</li>
+</ul>
+
+<p>None of this requires technical knowledge on your side. It requires knowing your own rules, which you already do — they are just not written down yet.</p>
+
+<h2>Do it before, not after</h2>
+
+<p>The list is only useful if it exists before the change. Written afterwards, it gets written from the new system, which means it records whatever the new system happens to do and quietly blesses any rule that shifted. Written first, it is a standard the new system has to meet.</p>
+
+<p>That is the whole method: decide what must stay true, in sentences anyone can read, and check them one at a time. It is not sophisticated. It is just the difference between knowing a rebuild worked and assuming it did.</p>
+
+<p><a data-cta="art-verify-a-rewrite-still-works-to-contact" href="/contact.html" data-contact-method="contact_page" data-cta-location="article_end">Ask about a migration or rebuild you are planning</a>, or <a data-cta="art-verify-a-rewrite-still-works-to-crm-rollout-team-adoption" href="/blog/crm-rollout-team-adoption.html">read how a CRM rollout went in practice</a>.</p>
+</article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="wordmark">
+      <span class="wm-main" style="font-size: 1rem;">Soft Science</span>
+    </span>
+    <span>&copy; 2026 Soft Science Studio</span>
+  </div>
+</footer>
+
+</body>
+</html>
