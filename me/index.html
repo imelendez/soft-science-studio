@@ -76,6 +76,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul class="cards">
     <!--
       ============================================================
+      ELECTION WINDOW — highlighted 2026-10-19, the first day of early
+      voting. Dates below are from harrisvotes.com (Harris County Clerk),
+      checked that day: early voting Oct 19–30, mail-ballot application
+      deadline Oct 23, Election Day Nov 3, polls 7am–7pm.
+
+      TWO SWAPS, THEN IT GOES BACK TO NORMAL:
+      • On OCT 31, change the label to "Election Day is Nov 3".
+      • After NOV 3, drop "card-featured" and the <span class="timely">
+        line entirely, and restore the plain description. This card is
+        evergreen the rest of the year; only the highlight is seasonal.
+
+      The /vote/ page itself deliberately carries NO dates — see the note
+      at the bottom of it. Don't add any there; this card is the one place
+      a date appears, which is why it has a removal plan.
+      ============================================================
+    -->
+    <li>
+      <a class="card primary a-civic card-featured" href="/vote/" data-cta="me-vote">
+        <span class="timely">Early voting is open · through Oct 30</span>
+        <span class="t">🗳️ Texas voting resources</span>
+        <span class="d">Check your registration, see what's actually on your ballot, and find where to vote. Election Day is Nov 3. Official, nonpartisan sources only.</span>
+      </a>
+    </li>
+    <!--
+      ============================================================
       TEMPORARY — highlighted event, swapped in 2026-09-24 (replaced
       Tackle Cancer Fest, which was Sept 19). Goes straight to the event's
       own page. REMOVE AFTER 2026-11-15.
@@ -121,29 +146,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="card primary a-body" href="/running/" data-cta="me-running">
         <span class="t">🏃 Running</span>
         <span class="d">A run club most nights of the week in Houston — where each one meets, and the races coming up.</span>
-      </a>
-    </li>
-    <!--
-      ============================================================
-      TEMPORARY — VDR push, added 2026-09-08 for the video.
-      Extended 2026-09-14: the county runs weekly trainings and the video is
-      still drawing responses, so this stays up. REMOVE AFTER 2026-10-14, together
-      with the matching card on /vote/. The .card-featured and .timely styles
-      in css/styles.css are SHARED with the weekend events cards — keep them.
-      ============================================================
-    -->
-    <li>
-      <a class="card primary a-civic card-featured" href="https://www.hctax.net/Voter/Deputy"
-         data-external data-cta="vdr-signup-me">
-        <span class="timely">Weekly trainings</span>
-        <span class="t">🗳️ Become a Volunteer Deputy Registrar</span>
-        <span class="d">Get certified to register voters in Harris County. I signed up — training dates and registration are on the county page.</span>
-      </a>
-    </li>
-    <li>
-      <a class="card primary a-civic" href="/vote/" data-cta="me-vote">
-        <span class="t">🗳️ Texas voting resources</span>
-        <span class="d">Register, check your registration, find what's actually on your ballot.</span>
       </a>
     </li>
     <li>
